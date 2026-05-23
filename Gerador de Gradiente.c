@@ -40,15 +40,15 @@ void GerarGMP(const char* filename)
     unsigned char header[54]=
     {
         'B', 'M',
-        0,0,0,0,            // Tamanho do arquivo (será preenchido)
-        0,0,0,0,            // Reservado
-        54,0,0,0,           // Offset onde começam os pixels
-        40,0,0,0,           // Tamanho do cabeçalho da imagem
-        0,0,0,0,            // Largura (preenchido abaixo)
-        0,0,0,0,            // Altura (preenchido abaixo)
-        1,0,                // Planos (sempre 1)
-        24,0,               // Bits por pixel (24 bits = RGB)
-        0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0 // Outros campos zerados
+        0,0,0,0,            
+        0,0,0,0,            
+        54,0,0,0,           
+        40,0,0,0,          
+        0,0,0,0,            
+        0,0,0,0,           
+        1,0,                
+        24,0,              
+        0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0 
     };
         header[18] = WIDTH & 0xFF; header[19] = (WIDTH >> 8) & 0xFF;
         header[22] = HEIGHT & 0xFF; header[23] = (HEIGHT >> 8) & 0xFF;
